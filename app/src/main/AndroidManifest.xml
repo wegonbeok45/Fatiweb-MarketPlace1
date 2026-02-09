@@ -10,18 +10,39 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Stagepfe">
+        android:theme="@style/Theme.TestApp">
+        
+        <!-- Splash Activity - Launcher -->
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.Stagepfe">
+            android:theme="@style/Theme.TestApp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <activity
+            android:name=".OnboardingActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".OnboardingScreen1Activity"
+            android:exported="false" />
+
+        <activity
+            android:name=".OnboardingScreen2Activity"
+            android:exported="false" />
+
+        <activity
+            android:name=".OnboardingScreen3Activity"
+            android:exported="false" />
+
+        <!-- Main Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

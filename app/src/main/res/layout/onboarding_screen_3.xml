@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brand_beige"
+    android:fitsSystemWindows="true"
+    android:paddingHorizontal="@dimen/spacing_lg"
+    android:paddingTop="@dimen/spacing_md"
+    android:paddingBottom="@dimen/spacing_md"
+    tools:context=".OnboardingScreen3Activity">
+
+    <!-- Logo - Consistent top-left positioning -->
+    <TextView
+        android:id="@+id/tv_fw_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_md"
+        android:fontFamily="sans-serif-black"
+        android:text="FW"
+        android:textColor="@color/brand_dark"
+        android:textSize="@dimen/text_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Illustration Card - Consistent sizing -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/iv_onboarding_illustration_3"
+        android:layout_width="0dp"
+        android:layout_height="280dp"
+        android:layout_marginTop="@dimen/spacing_xl"
+        app:cardCornerRadius="@dimen/card_corner_radius"
+        app:cardElevation="@dimen/card_elevation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_fw_logo">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/welcome_picture"
+            android:contentDescription="@null" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Title - Consistent typography -->
+    <TextView
+        android:id="@+id/tv_onboarding_title_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_lg"
+        android:text="Prêt à commencer\nvotre voyage ?"
+        android:textAlignment="center"
+        android:textColor="@color/brand_dark"
+        android:textSize="@dimen/text_headline"
+        android:textStyle="bold"
+        android:letterSpacing="0.02"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_onboarding_illustration_3" />
+
+    <!-- Description - Consistent body text -->
+    <TextView
+        android:id="@+id/tv_onboarding_description_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_md"
+        android:text="Rejoignez des milliers d'utilisateurs qui font confiance à FatiWeb Market pour leurs achats de produits tunisiens authentiques."
+        android:textAlignment="center"
+        android:textColor="@color/onboarding_grey_text"
+        android:textSize="@dimen/text_body"
+        android:lineSpacingMultiplier="1.3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_onboarding_title_3" />
+
+    <!-- Page Indicator - Consistent positioning -->
+    <LinearLayout
+        android:id="@+id/ll_page_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_xl"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_onboarding_description_3">
+
+        <View
+            android:layout_width="@dimen/page_indicator_inactive_width"
+            android:layout_height="@dimen/page_indicator_height"
+            android:background="@drawable/onboarding_dot_inactive" />
+
+        <View
+            android:layout_width="@dimen/page_indicator_inactive_width"
+            android:layout_height="@dimen/page_indicator_height"
+            android:layout_marginStart="@dimen/page_indicator_spacing"
+            android:background="@drawable/onboarding_dot_inactive" />
+
+        <View
+            android:layout_width="@dimen/page_indicator_active_width"
+            android:layout_height="@dimen/page_indicator_height"
+            android:layout_marginStart="@dimen/page_indicator_spacing"
+            android:background="@drawable/onboarding_dot_active" />
+    </LinearLayout>
+
+    <!-- Get Started Button - Consistent styling with unified dimensions -->
+    <Button
+        android:id="@+id/btn_get_started"
+        style="@style/PrimaryButton"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="@dimen/spacing_lg"
+        android:layout_marginBottom="@dimen/spacing_sm"
+        android:text="Commencer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_page_indicator" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

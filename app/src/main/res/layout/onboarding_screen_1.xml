@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brand_beige"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    tools:context=".OnboardingScreen1Activity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/spacing_lg"
+        android:paddingTop="@dimen/spacing_md"
+        android:paddingBottom="@dimen/spacing_md">
+
+        <!-- Skip Button - Consistent top-right positioning -->
+        <TextView
+            android:id="@+id/tv_skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_md"
+            android:padding="@dimen/spacing_sm"
+            android:text="Passer"
+            android:textColor="@color/onboarding_grey_text"
+            android:textSize="@dimen/text_body"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Illustration Card - Consistent sizing and positioning -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/iv_onboarding_illustration"
+            android:layout_width="0dp"
+            android:layout_height="280dp"
+            android:layout_marginTop="@dimen/spacing_xl"
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:cardElevation="@dimen/card_elevation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_skip">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/welcome_picture"
+                android:contentDescription="@null" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Title - Consistent typography and spacing -->
+        <TextView
+            android:id="@+id/tv_onboarding_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:text="Bienvenue sur\nFatiWeb Market"
+            android:textAlignment="center"
+            android:textColor="@color/brand_dark"
+            android:textSize="@dimen/text_headline"
+            android:textStyle="bold"
+            android:letterSpacing="0.02"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_onboarding_illustration" />
+
+        <!-- Description - Consistent body text styling -->
+        <TextView
+            android:id="@+id/tv_onboarding_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_md"
+            android:text="Découvrez le meilleur des produits tunisiens. De l'artisanat aux produits locaux, tout ce dont vous avez besoin est à portée de main."
+            android:textAlignment="center"
+            android:textColor="@color/onboarding_grey_text"
+            android:textSize="@dimen/text_body"
+            android:lineSpacingMultiplier="1.3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_onboarding_title" />
+
+        <!-- Page Indicator - Consistent positioning -->
+        <LinearLayout
+            android:id="@+id/ll_page_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xl"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_onboarding_description">
+
+            <View
+                android:layout_width="@dimen/page_indicator_active_width"
+                android:layout_height="@dimen/page_indicator_height"
+                android:background="@drawable/onboarding_dot_active" />
+
+            <View
+                android:layout_width="@dimen/page_indicator_inactive_width"
+                android:layout_height="@dimen/page_indicator_height"
+                android:layout_marginStart="@dimen/page_indicator_spacing"
+                android:background="@drawable/onboarding_dot_inactive" />
+
+            <View
+                android:layout_width="@dimen/page_indicator_inactive_width"
+                android:layout_height="@dimen/page_indicator_height"
+                android:layout_marginStart="@dimen/page_indicator_spacing"
+                android:background="@drawable/onboarding_dot_inactive" />
+        </LinearLayout>
+
+        <!-- Next Button - Consistent styling with unified dimensions -->
+        <Button
+            android:id="@+id/btn_next"
+            style="@style/PrimaryButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:layout_marginBottom="@dimen/spacing_sm"
+            android:drawableEnd="@drawable/ic_arrow_forward"
+            android:drawablePadding="@dimen/spacing_sm"
+            android:text="Suivant"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_page_indicator" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

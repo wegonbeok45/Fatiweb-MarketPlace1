@@ -1,5 +1,96 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme with smooth transitions enabled -->
+    <style name="Base.Theme.TestApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Enable smooth transitions -->
+        <item name="android:windowAnimationStyle">@style/ActivityTransitionStyle</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowEnterTransition">@transition/fade_in</item>
+        <item name="android:windowExitTransition">@transition/fade_out</item>
+        <!-- Performance optimization -->
+        <item name="android:hardwareAccelerated">true</item>
+    </style>
 
-    <style name="Theme.Stagepfe" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.TestApp" parent="Base.Theme.TestApp" />
+
+    <!-- Activity Transition Style for Smooth Animations -->
+    <style name="ActivityTransitionStyle">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+    <!-- Primary Button Style - Consistent across all screens -->
+    <style name="PrimaryButton" parent="Widget.Material3.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/button_height</item>
+        <item name="android:minWidth">@dimen/button_min_width</item>
+        <item name="android:layout_marginStart">@dimen/spacing_xl</item>
+        <item name="android:layout_marginEnd">@dimen/spacing_xl</item>
+        <item name="android:layout_marginTop">@dimen/spacing_md</item>
+        <item name="android:layout_marginBottom">@dimen/spacing_lg</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_button</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingStart">@dimen/spacing_lg</item>
+        <item name="android:paddingEnd">@dimen/spacing_lg</item>
+        <item name="cornerRadius">@dimen/button_corner_radius</item>
+        <item name="android:elevation">@dimen/button_elevation</item>
+        <item name="android:stateListAnimator">@animator/button_state_list_animator</item>
+        <item name="backgroundTint">@color/onboarding_dark_button</item>
+        <!-- Ripple effect for touch feedback -->
+        <item name="rippleColor">@color/white_alpha_30</item>
+    </style>
+
+    <!-- Secondary Button Style -->
+    <style name="SecondaryButton" parent="Widget.Material3.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/button_height</item>
+        <item name="android:minWidth">@dimen/button_min_width</item>
+        <item name="android:layout_marginStart">@dimen/spacing_xl</item>
+        <item name="android:layout_marginEnd">@dimen/spacing_xl</item>
+        <item name="android:layout_marginTop">@dimen/spacing_md</item>
+        <item name="android:layout_marginBottom">@dimen/spacing_md</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_button</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingStart">@dimen/spacing_lg</item>
+        <item name="android:paddingEnd">@dimen/spacing_lg</item>
+        <item name="cornerRadius">@dimen/button_corner_radius</item>
+        <item name="android:elevation">@dimen/button_elevation</item>
+        <item name="android:stateListAnimator">@animator/button_state_list_animator</item>
+        <item name="backgroundTint">@color/onboarding_blue</item>
+        <item name="rippleColor">@color/white_alpha_30</item>
+    </style>
+
+    <!-- Card Style -->
+    <style name="OnboardingCard" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+        <item name="cardBackgroundColor">@color/white</item>
+    </style>
+
+    <!-- Text Styles -->
+    <style name="HeadlineText">
+        <item name="android:textSize">@dimen/text_headline</item>
+        <item name="android:textColor">@color/brand_dark</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="TitleText">
+        <item name="android:textSize">@dimen/text_title</item>
+        <item name="android:textColor">@color/brand_dark</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BodyText">
+        <item name="android:textSize">@dimen/text_body</item>
+        <item name="android:textColor">@color/onboarding_grey_text</item>
+        <item name="android:lineSpacingMultiplier">1.3</item>
+    </style>
 </resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Consistent Spacing Guidelines -->
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">16dp</dimen>
+    <dimen name="spacing_lg">24dp</dimen>
+    <dimen name="spacing_xl">32dp</dimen>
+    <dimen name="spacing_xxl">48dp</dimen>
+
+    <!-- Button Dimensions -->
+    <dimen name="button_height">56dp</dimen>
+    <dimen name="button_min_width">200dp</dimen>
+    <dimen name="button_corner_radius">16dp</dimen>
+    <dimen name="button_elevation">4dp</dimen>
+    <dimen name="button_elevation_pressed">8dp</dimen>
+
+    <!-- Card Dimensions -->
+    <dimen name="card_corner_radius">24dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+
+    <!-- Text Sizes -->
+    <dimen name="text_headline">32sp</dimen>
+    <dimen name="text_title">24sp</dimen>
+    <dimen name="text_body">16sp</dimen>
+    <dimen name="text_caption">12sp</dimen>
+    <dimen name="text_button">16sp</dimen>
+
+    <!-- Icon Sizes -->
+    <dimen name="icon_sm">24dp</dimen>
+    <dimen name="icon_md">32dp</dimen>
+    <dimen name="icon_lg">48dp</dimen>
+
+    <!-- Progress Bar -->
+    <dimen name="progress_bar_height">4dp</dimen>
+
+    <!-- Page Indicator -->
+    <dimen name="page_indicator_active_width">24dp</dimen>
+    <dimen name="page_indicator_inactive_width">8dp</dimen>
+    <dimen name="page_indicator_height">8dp</dimen>
+    <dimen name="page_indicator_spacing">8dp</dimen>
+</resources>

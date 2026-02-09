@@ -1,4 +1,4 @@
-package isim.ia2y.stagepfe
+package isim.ia2y.testapp
 
 import org.junit.Test
 

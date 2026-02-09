@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brand_beige"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:overScrollMode="never"
+    tools:context=".OnboardingScreen2Activity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/spacing_lg"
+        android:paddingTop="@dimen/spacing_sm">
+
+        <!-- Toolbar - Consistent positioning -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/brand_beige"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_back_arrow"
+                android:layout_width="@dimen/icon_md"
+                android:layout_height="@dimen/icon_md"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Back"
+                android:padding="@dimen/spacing_xs"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@color/brand_dark" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="FatiWeb Market"
+                android:textColor="@color/brand_dark"
+                android:textSize="@dimen/text_title"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <!-- Title - Consistent typography -->
+        <TextView
+            android:id="@+id/tv_onboarding_title_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:text="Découvrez l'excellence\ntunisienne"
+            android:textAlignment="center"
+            android:textColor="@color/brand_dark"
+            android:textSize="@dimen/text_headline"
+            android:textStyle="bold"
+            android:letterSpacing="0.02"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+        <!-- Description - Consistent body text -->
+        <TextView
+            android:id="@+id/tv_onboarding_description_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_md"
+            android:text="Explorez nos produits locaux à travers nos catégories soigneusement sélectionnées."
+            android:textAlignment="center"
+            android:textColor="@color/onboarding_grey_text"
+            android:textSize="@dimen/text_body"
+            android:lineSpacingMultiplier="1.3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_onboarding_title_2" />
+
+        <!-- Category Cards - Consistent spacing -->
+        <LinearLayout
+            android:id="@+id/ll_category_cards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/spacing_md"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_onboarding_description_2">
+
+            <!-- Alimentation Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/icon_lg"
+                android:layout_marginBottom="@dimen/spacing_sm"
+                app:cardCornerRadius="@dimen/spacing_md"
+                app:cardElevation="@dimen/card_elevation">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/card_bg_alimentation">
+
+                    <ImageView
+                        android:id="@+id/iv_alimentation_icon"
+                        android:layout_width="@dimen/icon_md"
+                        android:layout_height="@dimen/icon_md"
+                        android:layout_marginStart="@dimen/spacing_lg"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_alimentation"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_alimentation_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_md"
+                        android:text="Alimentation"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_title"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/iv_alimentation_icon"
+                        app:layout_constraintTop_toTopOf="@id/iv_alimentation_icon" />
+
+                    <TextView
+                        android:id="@+id/tv_alimentation_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_md"
+                        android:text="Saveurs du terroir"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_caption"
+                        app:layout_constraintStart_toEndOf="@id/iv_alimentation_icon"
+                        app:layout_constraintTop_toBottomOf="@id/tv_alimentation_title" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Cosmétiques Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/icon_lg"
+                android:layout_marginBottom="@dimen/spacing_sm"
+                app:cardCornerRadius="@dimen/spacing_md"
+                app:cardElevation="@dimen/card_elevation">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/card_bg_cosmetiques">
+
+                    <ImageView
+                        android:id="@+id/iv_cosmetiques_icon"
+                        android:layout_width="@dimen/icon_md"
+                        android:layout_height="@dimen/icon_md"
+                        android:layout_marginStart="@dimen/spacing_lg"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_cosmetiques"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_cosmetiques_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_md"
+                        android:text="Cosmétiques"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_title"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/iv_cosmetiques_icon"
+                        app:layout_constraintTop_toTopOf="@id/iv_cosmetiques_icon" />
+
+                    <TextView
+                        android:id="@+id/tv_cosmetiques_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_md"
+                        android:text="Soin naturel et bio"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_caption"
+                        app:layout_constraintStart_toEndOf="@id/iv_cosmetiques_icon"
+                        app:layout_constraintTop_toBottomOf="@id/tv_cosmetiques_title" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Artisanat Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/icon_lg"
+                app:cardCornerRadius="@dimen/spacing_md"
+                app:cardElevation="@dimen/card_elevation">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/card_bg_artisanat">
+
+                    <ImageView
+                        android:id="@+id/iv_artisanat_icon"
+                        android:layout_width="@dimen/icon_md"
+                        android:layout_height="@dimen/icon_md"
+                        android:layout_marginStart="@dimen/spacing_lg"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_artisanat"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_artisanat_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_md"
+                        android:text="Artisanat"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_title"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/iv_artisanat_icon"
+                        app:layout_constraintTop_toTopOf="@id/iv_artisanat_icon" />
+
+                    <TextView
+                        android:id="@+id/tv_artisanat_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_md"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_caption"
+                        app:layout_constraintStart_toEndOf="@id/iv_artisanat_icon"
+                        app:layout_constraintTop_toBottomOf="@id/tv_artisanat_title" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <!-- Page Indicator - Consistent positioning -->
+        <LinearLayout
+            android:id="@+id/ll_page_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_md"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/btn_continue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <View
+                android:layout_width="@dimen/page_indicator_inactive_width"
+                android:layout_height="@dimen/page_indicator_height"
+                android:background="@drawable/onboarding_dot_inactive" />
+
+            <View
+                android:layout_width="@dimen/page_indicator_active_width"
+                android:layout_height="@dimen/page_indicator_height"
+                android:layout_marginStart="@dimen/page_indicator_spacing"
+                android:background="@drawable/onboarding_dot_active" />
+
+            <View
+                android:layout_width="@dimen/page_indicator_inactive_width"
+                android:layout_height="@dimen/page_indicator_height"
+                android:layout_marginStart="@dimen/page_indicator_spacing"
+                android:background="@drawable/onboarding_dot_inactive" />
+        </LinearLayout>
+
+        <!-- Continue Button - Consistent styling -->
+        <Button
+            android:id="@+id/btn_continue"
+            style="@style/SecondaryButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginBottom="@dimen/spacing_sm"
+            android:text="Continuer"
+            app:layout_constraintBottom_toTopOf="@id/tv_skip_step"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Skip Step Text - Consistent positioning -->
+        <TextView
+            android:id="@+id/tv_skip_step"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_md"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/spacing_sm"
+            android:text="Passer l'étape"
+            android:textColor="@color/onboarding_grey_text"
+            android:textSize="@dimen/text_body"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
